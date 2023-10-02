@@ -1,92 +1,71 @@
-/* header */
+
     /* Geeft pagina achtergrond, font, kleur en zorgt voor afbeelding opvulling pagina met margin*/
 body {
-    background-color: rgb(47, 47, 48);
+    background-color: rgb(23, 23, 23);
     color:#dee0e7;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Poppins;
     margin:0;
 }
 
-    /* margin zorgt voor afstand links h1. flex en display voor plaatsing naast elkaar. */
-header {
-    margin-left: 10px;
-    flex: auto;
-    display: flex;
+@font-face {
+    font-family: Poppins;
+    src: url(Fonts/Poppins/Poppins-Regular.ttf);
 }
 
-/* zorgt voor positie van nav items naast h1*/
-nav {
-    flex: 1;
-    display: flex;
-    align-items: center;
+@font-face {
+    font-family: Poppins;
+    src: url(Fonts/Poppins/Poppins-Bold.ttf);
+    font-weight: bold;
 }
 
-ul {
-    display: flex;
-    justify-content: space-around;
-    flex: 1;
-    list-style: none;
-    flex-wrap: wrap;
-    padding: 10px;
-}
-
-h2, p {
-    margin-left: 10px;
-    display: flex;
-}
-
-#subtitel {
-    position: absolute ;
-    left: 0 rem;
-    top: 15rem;
-    font: size 300em;
-    padding: 0 1rem;
-}
-
-#afbeelding-1 {
-    position: relative;
-    margin: 3%;
-}
-/* cards */
-main > div > a {
-    border-radius: 25px;
-    padding: 10px;
-    margin: 10px;
-    margin-top: 40px;
-    width: 25%;
-    height: auto;
-    align-items: center;
-    background-color:#dee0e7;
-    color: black;
+a {
     text-decoration: none;
+    color: white;
+}
+ul, ol {
+    list-style-type: none;
+    padding-left: 0px;
+    padding-right: 10px;
+    margin-top: 0px ;
 }
 
-
-/* tekst hover */
-main > div > a:hover h2 {
-    color: rgb(204, 112, 0);
+main button {
+    display: block;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    background-color: rgb(255, 255, 13);
+    border-radius: 25px;
+    border-style: none;
+    margin: 10px;
+    padding: 10px 20px 10px 20px;
+    max-width: max-content;
+    font-weight: 600;
 }
 
-/* klok hover kleur */
-main > div:hover .fil1 {
-    fill:rgb(204, 112, 0);
-}
-
-/* scaling hover cards*/
-main > div:hover {
-    transform: scale(1.05
-    );
+main button:hover {
+    background-color: rgb(6, 6, 6);
+    color: rgb(255, 255, 13);
+    border: 1px solid rgb(255, 255, 13);
+    transform: scale(1.05);
     transition: 300ms;
+    font-weight: 600;
 }
-.fil1 {
-    display: inline-block;
-    width: 10px;
+
+h4 {
+    font-size: large;
 }
-div {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: stretch;
-    align-items: center;
+
+h5 {
+    font-size: 16px;
+}
+
+    /* ---- imgs */
+
+.imgicon {
+    width: 100px;
+    margin-left: 10px;
+    border-radius: 25px;
 }
 
 img {
@@ -94,8 +73,256 @@ img {
     height:auto;
  }
 
- #afbeelding-1 {
+#afbeelding-1 {
     max-width: 100%;
     height:auto;
     margin: 0px;
- }
+}
+
+#ade-logo-cube {
+    width: 150px;
+    margin-right: 15px;
+}
+
+/* ----- header ----- */
+    /* margin zorgt voor afstand links h1. flex en display voor plaatsing naast elkaar. */
+header > div {
+    margin-left: 10px;
+    flex: auto;
+    display: flex;
+}
+main {
+    margin-left: 10px
+}
+
+    /* zorgt voor positie van nav items naast h1*/
+div > nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+header > div:nth-child(1) {
+    margin-left: 10px;
+}
+
+header div ul {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+header div ul li:hover,
+header div h1:hover{
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+header div a:hover {
+    color: rgb(255, 255, 13)
+}
+
+header h1 {
+    color: rgb(255, 255, 13)
+}
+
+header > div {
+    margin-left: 0px;
+}
+
+
+
+.subtitel {
+    position: absolute ;
+    left: 0 rem;
+    top: 15rem;
+    font-size: 4vw;
+    padding: 0 1rem;
+    font-weight: 600;
+    align-items: center;
+    color:white;
+}
+.subtitel-special {
+    color: rgb(255, 255, 13)
+}
+
+/* ------ Index onderdeel------- */
+
+/* cards */
+.cards > a {
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 40px;
+    width: 25%;
+    height: auto;
+    align-items: center;
+    background-color:black;
+    color: #dee0e7;
+    text-decoration: none;
+    flex-direction: column;
+    display: flex;
+}
+
+main > section h2 {
+    color: rgb(255, 255, 13)
+}
+
+.cards {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+}
+
+main > section:nth-child(1) > a > h2 {
+    align-self: flex-start;
+}
+main > section:nth-child(1) > a > svg {
+    width: 100px;
+    height: 100px;
+    margin-top: auto;
+
+}
+
+main > section:nth-child(1) > a .fil1 {
+    fill:rgb(41, 41, 41);
+}
+/* klok hover kleur */
+main > section:nth-child(1) > a:hover .fil1 {
+    fill:rgb(255, 255, 13);
+}
+
+/* scaling hover cards*/
+main > section:nth-child(1) > a:hover {
+    transform: scale(1.05);
+    transition: 300ms;
+}
+
+/* Wat doen wij? section*/
+main > section:nth-child(2)  {
+    background-color:rgb(6, 6, 6);
+    color: #dee0e7;
+    border-radius: 25px;
+    padding: 7px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+main > section:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+/* agenda main */
+.overzicht {
+    display: flex;
+    flex-direction: column;
+}
+
+.festivalblock{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.festivalblock > div:nth-child(4),
+.festivalblock > div:nth-child(5) {
+    width: 50vw;
+}
+
+.festivalblock > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    align-items: flex-start;
+    margin-right: 30px;
+    width: 80vw;
+    color: white;
+}
+
+.festivalblock ul, ol {
+    list-style-type:none;
+    color: rgb(188, 188, 188);
+    width: max-content;
+}
+
+.festivalblock ul {
+    width: max-content;
+}
+.festivalblock ol {
+    padding-left: 0px;
+}
+
+.info-event {
+    display: flex;
+    align-items: flex-start;
+}
+
+h5 {
+    margin: 5px;
+    margin-left: 0px;
+    color: rgb(255, 255, 13);
+}
+
+hr {
+     border: 1px solid rgb(94, 94, 94);
+    width: 90%;
+}
+
+main span {
+    color: rgb(255, 255, 13);
+    font-family: poppins;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ----- footer ----- */
+
+
+footer ul {
+    list-style: none;
+}
+
+footer > nav > .nav-ul ul a:hover {
+    color: rgb(255, 255, 13);
+}
+
+.nav-ul {
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+footer ul {
+    display: inline;
+    padding: 0;
+    margin-top: 0;
+}
+
+h2 {
+    display: block;
+}
+
+footer > nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+footer a, p {
+    color:rgb(209, 209, 209);
+}
+footer p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+div .nav-ul > h2, 
+div .nav-ul > ul {
+    text-align: center;
+}
